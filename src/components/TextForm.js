@@ -4,10 +4,11 @@ export default function TextForm(props) {
     const [text, setText] = useState("Enter the text here2");
     const handleUpClick=()=>{
         console.log("clicked");
-        setText=("You have clicked on handleUpClick");
+        setText("You have clicked on handleUpClick");
     }
-    const handleOnChange=()=>{
+    const handleOnChange=(event)=>{
         console.log("changed");
+        setText(event.target.value)
     }
   return (
     <>
